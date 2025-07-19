@@ -1,0 +1,36 @@
+plugins {
+    id("com.android.library")
+}
+
+android {
+    namespace 'rikka.shizuku.api'
+    compileSdk 35
+    buildFeatures {
+        buildConfig false
+    }
+    defaultConfig {
+        minSdk = 26
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    api project(':shared')
+
+    implementation 'androidx.annotation:annotation:1.9.1'
+    implementation project(':aidl')
+}
+
+ext {
+    publishLibrary = true
+    POM_NAME = "Shizuku API - API"
+    POM_DESCRIPTION = "API of Shizuku and Sui."
+}

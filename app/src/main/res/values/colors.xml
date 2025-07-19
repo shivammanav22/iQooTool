@@ -1,0 +1,22 @@
+<resources>
+    <!-- Primary theme colors -->
+    <color name="purple_500">#BB86FC</color>
+    <color name="purple_700">#000000</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Custom category colors -->
+    <color name="gamingColor">#4CAF50</color>
+    <color name="displayColor">#AF2668</color>
+    <color name="thermalColor">#F44336</color>
+    <color name="systemColor">#009688</color>
+
+    <!-- Card & UI colors -->
+    <color name="cardBackgroundDark">#1A1A1A</color>
+    <color name="cardStrokeColor">#424242</color>
+    <color name="toggleTrack">#757575</color>
+    <color name="toggleThumb">#009688</color>
+    <color name="buttonPrimary">#1AC8B3</color>
+    <color name="buttonAccent">#837956</color>
+</resources>
