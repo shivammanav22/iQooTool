@@ -1,0 +1,44 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://api.xposed.info/' } // Rikka's plugin repo
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    plugins {
+        // Standard Android and Kotlin plugins
+        id("com.android.application") version "8.11.1" // AGP version
+        id("com.android.library") version "8.11.1" // AGP version for library modules
+        id("org.jetbrains.kotlin.android") version "2.2.0" // Kotlin plugin version
+        id("org.jetbrains.kotlin.plugin.parcelize") version "2.2.0" // Kotlin plugin version
+        id("org.jetbrains.kotlin.plugin.compose") version "2.2.0" // Kotlin Compose plugin version
+
+        // Rikka's Tools plugins (declare versions here)
+        id("dev.rikka.tools.autoresconfig") version "1.2.2"
+        id("dev.rikka.tools.materialthemebuilder") version "1.5.1"
+        id("dev.rikka.tools.refine") version "4.4.0"
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "iqoo"
+
+include ':app'
+include ':shared'
+include ':provider'
+include ':api'
+include ':aidl'
+
+project(":api").projectDir=file("api")
+project(":shared").projectDir=file("shared")
+project(":provider").projectDir=file("provider")
+project(":aidl").projectDir=file("aidl")
